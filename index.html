@@ -141,7 +141,7 @@
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<!-- <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/rr.jpg);"> -->
+	          	<div class="one-third js-fullheight order-md-last img w-50 h-75 mb-10" style="background-image:url(images/rr.jpg);">
 	          	 <div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -214,7 +214,7 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/22.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/rr.jpg" class="img-fluid rounded b-shadow-a" style="width: 150px;height:180px ;" alt="">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
@@ -401,7 +401,7 @@
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a id="download-btn" class="btn btn-primary py-4 px-5">Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -640,6 +640,16 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <script>
+    document.getElementById("download-btn").addEventListener("click", function() {
+        const fileUrl = 'RobiBeglarashvili.pdf';
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = "RobiBeglarashvili.pdf";  
+        link.click();
+    });
+</script>
     
   </body>
 </html>
